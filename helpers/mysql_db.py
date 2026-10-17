@@ -19,6 +19,8 @@ class DatabaseHandler:
             database=database,
             port=int(port),
             autocommit=True,
+            ssl_disabled=False,
+            connection_timeout=10,
         )
         self._lock = threading.Lock()
         self.create_table()
